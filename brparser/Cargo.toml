@@ -1,0 +1,9 @@
+[package]
+name = "brparser"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+flate2 = "1.1.2"
+bitreader = "0.3.11"
+serde = { version = "1.0.219", features = ["derive"] }
