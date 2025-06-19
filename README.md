@@ -1,5 +1,5 @@
 # Brawlhalla Replay Parser
-A simple-to-use CLI tool to decompress, decipher and parse Brawlhalla .replay files, written in Rust.
+A simple-to-use CLI tool to decompress, decrypt and parse Brawlhalla .replay files, written in Rust.
 
 ## Building
 ```bash
