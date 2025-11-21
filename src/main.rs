@@ -3,7 +3,7 @@ use std::fs::File;
 use std::io::Write;
 use brparser::ReplayParser;
 
-/// A simple-to-use CLI to decompress, decipher and parse Brawlhalla .replay files
+/// A simple-to-use CLI to decompress, decipher and parse Brawlhalla .replay files.
 #[derive(Parser, Debug)]
 #[command(version, about, long_about = None)]
 struct Args {
