@@ -52,7 +52,7 @@ pub struct PlayerType {
     pub companion_id: u32,
     pub emitter_id: u32,
     pub player_theme_id: u32,
-    pub unknown_int: u32,
+    pub trail_effect_id: u32,
     pub taunts: [u32; 8],
     pub win_taunt_id: u16,
     pub lose_taunt_id: u16,
@@ -216,9 +216,8 @@ impl ReplayParser {
                             let spawn_bot_id = Self::read_int(&mut reader);
                             let companion_id = Self::read_int(&mut reader);
                             let emitter_id = Self::read_int(&mut reader);
+                            let trail_effect_id = Self::read_int(&mut reader);
                             let player_theme_id = Self::read_int(&mut reader);
-
-                            let unknown_int = Self::read_int(&mut reader); // TODO find purpose of this integer
 
                             let taunts: [u32; 8] = std::array::from_fn(|_| Self::read_int(&mut reader));
                             let win_taunt_id = Self::read_short(&mut reader);
@@ -272,8 +271,8 @@ impl ReplayParser {
                                 spawn_bot_id,
                                 companion_id,
                                 emitter_id,
+                                trail_effect_id,
                                 player_theme_id,
-                                unknown_int,
                                 taunts,
                                 win_taunt_id,
                                 lose_taunt_id,
